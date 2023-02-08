@@ -14,7 +14,7 @@ public class ComboController {
     private final ComboService comboService;
 
     @GetMapping("/menus")
-    public Map<String, Combo> getCombo1()
+    public Map<String, Combo> listCombos()
     {
         return comboService.listCombos();
     }
