@@ -5,6 +5,7 @@ import com.example.burgerordersystem.service.ComboService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 
 @RequiredArgsConstructor
@@ -14,7 +15,7 @@ public class ComboController {
     private final ComboService comboService;
 
     @GetMapping("/menus")
-    public Map<String, Combo> listCombos()
+    public List<Combo> listCombos()
     {
         return comboService.listCombos();
     }

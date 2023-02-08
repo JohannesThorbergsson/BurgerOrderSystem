@@ -11,8 +11,8 @@ import java.util.Map;
 public class ComboService {
     private final ComboRepository comboRepository;
 
-    public Map<String, Combo> listCombos() {
-        return comboRepository.listCombos();
+    public List<Combo> listCombos() {
+        return comboRepository.listCombos().values().stream().toList();
     }
 
     public Combo getComboById(String id) {

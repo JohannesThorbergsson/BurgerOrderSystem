@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -38,7 +39,7 @@ class ComboServiceTest {
         Map<String, Combo> expectedCombos = shortComboMap;
         when(comboRepository.listCombos()).thenReturn(expectedCombos);
         // WHEN
-        Map<String,Combo> actualCombos = comboService.listCombos();
+        List<Combo> actualCombos = comboService.listCombos();
         // THEN
         verify(comboRepository).listCombos();
         Assertions.assertEquals(expectedCombos, actualCombos);
